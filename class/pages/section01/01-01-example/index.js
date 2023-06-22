@@ -1,4 +1,4 @@
-export default function qqq() {
+export default function Qqq() {
 
     // const aaa = 3; // => 위쪽은 자바스크립트 작성하는 공간
 

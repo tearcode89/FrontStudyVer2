@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Qqq from '../../section01/01-01-example'
 export default function RestGetPage() {
 
     function onClickAsync() {
@@ -22,6 +23,7 @@ export default function RestGetPage() {
             <div>
                 <button onClick={onClickAsync}>REST API 비동기 요청하기</button>
                 <button onClick={onClickSync}>REST API 동기 요청하기</button>
+                <Qqq/>
             </div>
         </>
     )
