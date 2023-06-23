@@ -5,7 +5,7 @@ export default function StaticRoutingPage(){
     const router = useRouter();
 
     const onClickMove1 = () => {
-        router.push("/section05/05-02-static-routing-board-moved/1")
+        router.push("/section05/05-02-static-routing-board-moved/[qqq]")
     }
 
     const onClickMove2 = () => {

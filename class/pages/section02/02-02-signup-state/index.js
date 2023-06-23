@@ -23,7 +23,7 @@ export default function SignUpStatePage(){
         console.log(email + "이메일값이 저장되었습니다.") // 진짜 포장이 잘 됐는지 확인해보기
         console.log(password + "비빌번호값이 저장되었습니다.") // 진짜 포장이 잘 됐는지 확인해보기
 
-        // 1. 검증하기
+        // [qqq]. 검증하기
         if(email.includes("@") === false){
             //alert('이메일이 옳바르지 않습니다. @가 없습니다.')
             // document.getElementById("myerror").innerText = '이메일이 올바르지 않습니다!! @가 없음!!' => 옛날방식
