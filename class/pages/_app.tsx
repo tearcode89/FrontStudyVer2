@@ -1,10 +1,7 @@
 import {ApolloClient, InMemoryCache, ApolloProvider} from "@apollo/client";
-import {ThemeProvider} from "@mui/styles";
-import {Mytheme} from '../theme';
 import {useTheme} from "@mui/styles";
-import {CssBaseline} from "@mui/material";
-export default function App({Component, pageProps}) {
-    const theme = useTheme();
+import {AppProps} from "next/app";
+export default function App({Component,pageProps}: AppProps){
 
     const client = new ApolloClient({
         uri: "http://backend-example.codebootcamp.co.kr/graphql",
@@ -14,13 +11,11 @@ export default function App({Component, pageProps}) {
 
     return (
         <div>
-            <ThemeProvider theme={Mytheme}>
                 <div>==========_app.js 컴포넌트의 시작 부분...==========</div>
                     <ApolloProvider client={client}>
                         <Component {...pageProps}/>
                     </ApolloProvider>
                 <div>==========_app.js 컴포넌트의 마지막 부분입니다.==========</div>
-            </ThemeProvider>
         </div>
     )
 }
