@@ -1,4 +1,5 @@
 import {gql, useQuery} from "@apollo/client";
+import {MouseEvent} from "react";
 
 const FETCH_BOARDS = gql`
     query{
@@ -17,22 +18,28 @@ export default function StaticMovedPage() {
     console.log(data?.fetchBoards)
 
     const spanStyle = {
-        border: '1px solid black'
+        border: '1px solid black',
+        margin: '10px'
+    }
+    const onClickAlert = (event: MouseEvent<HTMLDivElement>) => {
+        //alert(`${event.target.id}가 작성한 글입니다`)
+        alert(`${event.currentTarget.id}가 장성한 글입니다.`)
     }
 
+    const qqq = () => {
+        alert('클릭 타이틀')
+    }
 
     return(
         <>
-            {/*<div>1번 게시글로 이동이 완료되었습니다.</div>*/}
-            {/*<div>작성자는: {data ? data.fetchBoards.writer : "로딩중입니다."} 입니다.</div>*/}
-            {/*<div>제목: {data ? data.fetchBoards.title : "로딩중입니다."}</div>*/}
-            {/*<div>내용: {data ?  data.fetchBoards.contents : "로딩중입니다."}</div>*/}
-            {data?.fetchBoards.map(el => (
-                <div>
+            {data?.fetchBoards.map((el: any) => (
+                <div id={el.writer} onClick={onClickAlert}>
+                    <span>
+                        <input type="checkbox"/>
+                    </span>
                     <span style={spanStyle}>{el.number}</span>
                     <span style={spanStyle}>{el.title}</span>
                     <span style={spanStyle}>{el.writer}</span>
-
                 </div>
             ))}
         </>
