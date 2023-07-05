@@ -6,7 +6,7 @@ export default function RestGetPage(): JSX.Element {
 
     useEffect(()=>{
         const onClickSync = async(): Promise<void> =>  {
-            const result = await axios.get('https://dog.ceo/api/breedz/image/random')
+            const result = await axios.get('https://dog.ceo/api/breeds/image/random')
             setDog(result.data.message); // 사진 주소
         }
         void onClickSync();
