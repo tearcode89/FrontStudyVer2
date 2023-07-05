@@ -46,6 +46,8 @@ export default function FunctionalCounterPage():JSX.Element {
         void router.push('/')
     }
 
+    console.log('나는 언제 실행되게??')
+
         return(
             <>
                 <div>{count}</div>
