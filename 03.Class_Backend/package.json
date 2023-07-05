@@ -1,0 +1,16 @@
+{
+  "name": "03.Class_Backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "jun",
+  "license": "MIT",
+  "scripts": {
+    "qqq": "ts-node index.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
