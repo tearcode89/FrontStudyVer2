@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/consistent-type-imports': 'off',
-    '@typescript-eslint/no-misused-promises':'off'
+    '@typescript-eslint/no-misused-promises':'off',
+    'react/display-name': 'off'
   }
 }
